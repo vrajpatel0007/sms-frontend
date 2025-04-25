@@ -408,7 +408,8 @@ import {
   Get_Profile_img,
 } from "../../Api/api";
 
-const url = "http://localhost:8080";
+const url = "https://sms-backend-blue.vercel.app";
+// const url = "http://localhost:8080";
 
 // Axios interceptor to add Authorization header
 axios.interceptors.request.use(

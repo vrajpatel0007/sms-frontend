@@ -1,8 +1,8 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
-// const url = 'https://society-management-app-server.onrender.com'
-const url = 'http://localhost:8080'
+const url = 'https://sms-backend-blue.vercel.app'
+// const url = 'http://localhost:8080'
 
 // login Manger
 
@@ -327,7 +327,7 @@ export const PostSumdata = async (formData) => {
 
     try {
         const response = await axios.post(
-            `http://localhost:8080/resident/create`,
+            `https://sms-backend-blue.vercel.app/resident/create`,
             data,
             {
                 headers: { 'Content-Type': 'multipart/form-data' },
@@ -780,7 +780,7 @@ export const GetVisiter = (setVisitorLogs, setloding) => {
 }
 
 export const PostVisiter = (data, Fdata, setAddVisiterbox) => {
-    axios.post('http://localhost:8080/Visitors', data).then((res) => {
+    axios.post('https://sms-backend-blue.vercel.app/Visitors', data).then((res) => {
         Fdata()
         setAddVisiterbox(res.data)
     })

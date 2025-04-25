@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// // const url = 'https://society-management-app-server.onrender.com'
-const url = 'http://localhost:8080'
+const url = 'https://sms-backend-blue.vercel.app'
+// const url = 'http://localhost:8080'
 
 axios.interceptors.request.use(
   (config) => {

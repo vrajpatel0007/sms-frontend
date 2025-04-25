@@ -8,7 +8,7 @@ const ViewComplintModel = ({ _id, closeViewComplint }) => {
     useEffect(() => {
         const fetchComplaintData = async () => {
             try {
-                const res = await axios.get(`https://society-management-app-server.onrender.com/complaint/getComplaint/${_id}`);
+                const res = await axios.get(`https://sms-backend-blue.vercel.app/complaint/getComplaint/${_id}`);
                 setEditNumber(Array.isArray(res.data) ? res.data : [res.data]);
                 setloding(false)
             } catch (error) {

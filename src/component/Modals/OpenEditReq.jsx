@@ -25,7 +25,7 @@ const OpenEditReq = ({ _id, closeEditComplint, Lodata }) => {
 
     const editdata = async (_id) => {
         try {
-            const res = await axios.get(`https://society-management-app-server.onrender.com/request/getRequest/${_id}`);
+            const res = await axios.get(`https://sms-backend-blue.vercel.app/request/getRequest/${_id}`);
             if (res.data) {
                 const formattedDate = res.data.Request_Date ? new Date(res.data.Request_Date).toISOString().split('T')[0] : '';
                 seteditComplaint({

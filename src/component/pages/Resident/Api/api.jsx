@@ -2,8 +2,8 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { Razorpay } from "razorpay";
 
-// const url = 'https://society-management-app-server.onrender.com'
-const url = "http://localhost:8080";
+const url = 'https://sms-backend-blue.vercel.app'
+// const url = "http://localhost:8080";
 
 axios.interceptors.request.use(
   (config) => {
@@ -37,7 +37,7 @@ export const AnnouncementGet = async (setAnnouncement) => {
 
 export const Get_Pending_Maintenances = async (setPendingData) => {
   await axios
-    .get("http://localhost:8080/maintenance/getAllaintenances")
+    .get("https://sms-backend-blue.vercel.app/maintenance/getAllaintenances")
     .then((res) => {
       console.log("🚀 ~ axios.get ~ res.data:", res.data);
       setPendingData(res.data);
@@ -137,7 +137,7 @@ export const DeleteRequest_Submission = (
 // Maintenance_Invoices page
 // Pending Maintanance Get
 export const Get_Pending_Maintanance = (setMaintanance) => {
-  axios.get("http://localhost:8080/Pending_Maintanance").then((res) => {
+  axios.get("https://sms-backend-blue.vercel.app/Pending_Maintanance").then((res) => {
     setMaintanance(res.data);
   });
 };
@@ -145,21 +145,21 @@ export const Get_Pending_Maintanance = (setMaintanance) => {
 // Pending Maintanance User Data Get
 
 export const Get_Maintenance_Invoices_data = () => {
-  axios.get("http://localhost:8080/Maintenance_Invoices_data").then((res) => {
+  axios.get("https://sms-backend-blue.vercel.app/Maintenance_Invoices_data").then((res) => {
     setgetInvoices(res.data);
   });
 };
 
 // EventData
 export const GetEventData = (setEventData) => {
-  axios.get("http://localhost:8080/EventData").then((res) => {
+  axios.get("https://sms-backend-blue.vercel.app/EventData").then((res) => {
     // console.log(res.data);
     setEventData(res.data);
   });
 };
 
 export const GetActivityData = (setActivityData) => {
-  axios.get("http://localhost:8080/ActivityData").then((res) => {
+  axios.get("https://sms-backend-blue.vercel.app/ActivityData").then((res) => {
     // console.log(res.data);
     setActivityData(res.data);
   });
@@ -167,26 +167,26 @@ export const GetActivityData = (setActivityData) => {
 
 //Polls
 export const GetOwnPoll = async () => {
-  const res = await axios.get("http://localhost:8080/OwnPoll");
+  const res = await axios.get("https://sms-backend-blue.vercel.app/OwnPoll");
   return res.data;
 };
 
 export const PostOwnpoll = (data, Fdata, closeCreatePoll) => {
   console.log(data);
 
-  axios.post(`http://localhost:8080/OwnPoll`, data).then((res) => {
+  axios.post(`https://sms-backend-blue.vercel.app/OwnPoll`, data).then((res) => {
     closeCreatePoll(false);
     Fdata();
   });
 };
 
 export const GetNewPoll = async () => {
-  const res = await axios.get("http://localhost:8080/OwnPoll");
+  const res = await axios.get("https://sms-backend-blue.vercel.app/OwnPoll");
   return res.data;
 };
 
 export const GetPreviousPoll = async () => {
-  const res = await axios.get("http://localhost:8080/OwnPoll");
+  const res = await axios.get("https://sms-backend-blue.vercel.app/OwnPoll");
   return res.data;
 };
 
@@ -194,7 +194,7 @@ export const GetPreviousPoll = async () => {
 
 export const getMaintenanceStatus = async (setPendingData) => {
   await axios
-    .get("http://localhost:8080/maintenance/getMaintenanceStatus")
+    .get("https://sms-backend-blue.vercel.app/maintenance/getMaintenanceStatus")
     .then((res) => {
       console.log("🚀 ~ axios.get ~ res.data:", res.data);
       setPendingData(res.data);

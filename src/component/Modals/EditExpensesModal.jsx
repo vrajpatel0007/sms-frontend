@@ -30,7 +30,7 @@ const EditExpensesModal = ({ Close, _id, lodData }) => {
 
     const Fdata = async () => {
         try {
-            const response = await axios.put(`https://society-management-app-server.onrender.com/expenses/updateexpenses/${_id}`);
+            const response = await axios.put(`https://sms-backend-blue.vercel.app/expenses/updateexpenses/${_id}`);
             const data = response.data;
             setExpenses({
                 Title: data.Title || "",

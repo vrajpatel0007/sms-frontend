@@ -23,7 +23,7 @@ const OpenEditComplintModel = ({ _id, closeEditComplint,LodData }) => {
 
     const editdata = async (_id) => {
         try {
-            const res = await axios.get(`https://society-management-app-server.onrender.com/complaint/getComplaint/${_id}`);
+            const res = await axios.get(`https://sms-backend-blue.vercel.app/complaint/getComplaint/${_id}`);
             if (res.data) {
                 seteditComplaint({
                     Complainer_Name: res.data.Complainer_Name || '',

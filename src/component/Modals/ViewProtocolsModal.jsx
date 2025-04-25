@@ -16,7 +16,7 @@ const ViewProtocolsModal = ({ _id, CloseViewProtocols }) => {
     }, [])
 
     const Fdata = () => {
-        axios.get(`https://society-management-app-server.onrender.com/security/getprotocol/${_id}`).then((res) => {
+        axios.get(`https://sms-backend-blue.vercel.app/security/getprotocol/${_id}`).then((res) => {
             setSecurity(Array.isArray(res.data) ? res.data : [res.data]);
             setloding(false)
         })

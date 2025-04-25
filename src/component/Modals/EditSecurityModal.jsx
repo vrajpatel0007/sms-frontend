@@ -20,7 +20,7 @@ const EditSecurityModal = ({ _id, CloseEdit,Fdata }) => {
 
   const fetchSecurityData = async () => {
     try {
-      const res = await axios.get(`https://society-management-app-server.onrender.com/security/security/${_id}`);
+      const res = await axios.get(`https://sms-backend-blue.vercel.app/security/security/${_id}`);
       const data = res.data;
 
       if (data) {

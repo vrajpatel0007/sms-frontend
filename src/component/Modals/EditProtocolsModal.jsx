@@ -14,7 +14,7 @@ const EditProtocolsModal = ({ _id, CloseEditProtocols }) => {
         // Fetch data and set form values
         const Fdata = async () => {
             try {
-                const res = await axios.get(`https://society-management-app-server.onrender.com/security/getprotocol/${_id}`);
+                const res = await axios.get(`https://sms-backend-blue.vercel.app/security/getprotocol/${_id}`);
                 const { Title, Description, Date: apiDate, Time: apiTime } = res.data;
     
                 // Format the Date to yyyy-MM-dd

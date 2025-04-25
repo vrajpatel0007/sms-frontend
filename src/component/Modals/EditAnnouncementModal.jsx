@@ -16,7 +16,7 @@ const EditAnnouncementModal = ({ ClaseEditAnnouncement, _id, LodaData }) => {
   }, [])
 
   const Fdata = () => {
-    axios.get(`https://society-management-app-server.onrender.com/announcement/getAnnouncement/${_id}`).then((res) => {
+    axios.get(`https://sms-backend-blue.vercel.app/announcement/getAnnouncement/${_id}`).then((res) => {
       setValue('title', res.data.title);
       setValue('description', res.data.description);
       setValue('date', format(new Date(res.data.date), 'yyyy-MM-dd'));

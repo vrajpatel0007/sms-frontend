@@ -18,7 +18,7 @@ const EditcreateFacilityModal = ({ seteditcreate_facility, _id, lodData }) => {
     }, []);
 
     const Fdata = () => {
-        axios.put(`https://society-management-app-server.onrender.com/facility/updateFacility/${_id}`).then((res) => {
+        axios.put(`https://sms-backend-blue.vercel.app/facility/updateFacility/${_id}`).then((res) => {
             const fetchedData = res.data || {};
             setdata({
                 Facility_Name: fetchedData.Facility_Name || '',

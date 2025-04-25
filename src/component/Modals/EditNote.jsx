@@ -22,7 +22,7 @@ const EditNote = ({ _id, seteditcreate }) => {
 
     const Getdata = async () => {
         try {
-            const res = await axios.get(`https://society-management-app-server.onrender.com/note/getNote/${_id}`);
+            const res = await axios.get(`https://sms-backend-blue.vercel.app/note/getNote/${_id}`);
             const { Title, Description, Date } = res.data;
             setValue('Title', Title);
             setValue('Description', Description);
