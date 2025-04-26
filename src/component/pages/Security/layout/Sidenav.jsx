@@ -28,15 +28,12 @@ export default function Sidenav({ toggleNav, data }) {
           <Link
             onClick={toggleDropdown}
             aria-current={pathname.startsWith("/security") ? "page" : undefined}
-            className={`text-nowrap relative p-3 ms-4 m-2 rounded-lg text-lg transition-colors duration-300 flex items-center bg-gradient-to-r  text-white from-orange-600 to-yellow-500   ${pathname.startsWith("/security")
-              ? "bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white font-semibold"
-              : "hover:bg-gray-100 text-black"
+            className={`text-nowrap relative p-3 ms-4 m-2 rounded-lg text-lg transition-colors duration-300 flex text-black items-center   ${pathname.startsWith("/security")
+              ? "bg-gradient-to-r from-blue-600 to-blue-900 text-white font-semibold" : "hover:bg-gray-100"
               }`}
           >
             {/* Active Indicator */}
-            {pathname.startsWith("/security") && (
-              <div className="absolute -left-4 top-0 bottom-0 w-2 bg-orange-600 rounded-r-lg"></div>
-            )}
+            {pathname.startsWith("/security") }
             <MdSecurity  className="inline mr-2" />
             Security
           </Link>

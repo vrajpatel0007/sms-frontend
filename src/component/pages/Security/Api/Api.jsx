@@ -59,6 +59,7 @@ export const PostAlert = async (data, callback) => {
 
 export const Profile_img = (setFormData) => {
   axios.get(`${url}/security/profile`).then((res) => {
+    console.log(res.data);
     setFormData(res.data);
   });
 };

@@ -28,7 +28,7 @@ const Header = ({toggleNav}) => {
         <div className="flex items-center space-x-4">
 
           <OpneNotificationModal />
-          <Link className="flex items-center space-x-4" to="/profile">
+          <Link className="flex items-center space-x-4" >
             {FormData ? (
               <div className="flex items-center">
                 <div className="Profie-img mr-3">
@@ -39,7 +39,7 @@ const Header = ({toggleNav}) => {
                   />
                 </div>
                 <div className="profile-text">
-                  <p className="font-medium">{FormData.Firstname || "User"} {FormData.Lastname || ""}</p>
+                  <p className="font-medium">{FormData.Full_Name || "User"}</p>
                   <p className="text-gray-400">{FormData.Role
                     || "Role"}</p>
                 </div>
