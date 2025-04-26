@@ -19,7 +19,7 @@ const ViewReq = ({ _id, closeViewComplint }) => {
   const editdata = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:8080/request/getRequest/${_id}`, {
+      const response = await axios.get(`https://sms-backend-blue.vercel.app/request/getRequest/${_id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`, // Remove if not needed
         },
