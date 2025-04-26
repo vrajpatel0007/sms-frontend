@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import OpneNotificationModal from '../../../Modals/OpneNotificationModal';
-import { Profile_img } from '../../../services/Api/api';
+import { Profile_img } from '../Api/Api';
 import { Link } from 'react-router-dom';
 
 
