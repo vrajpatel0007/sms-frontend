@@ -138,7 +138,7 @@ const Financial_Management = () => {
                       <th className="px-4 py-2 text-center">Penalty</th>
                       <th className="px-4 py-2 text-center">Status</th>
                       <th className="px-4 py-2 text-center">Payment</th>
-                      <th className="px-4 py-2 text-center">Action</th>
+                      {/* <th className="px-4 py-2 text-center">Action</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -217,12 +217,12 @@ const Financial_Management = () => {
                           )}
                         </td>
                         <td className="px-2 justify-center md:px-4 py-2 md:py-3 text-xs md:text-sm text-gray-700 flex space-x-2 md:space-x-2">
-                          <button
+                          {/* <button
                             className="text-blue-500 bg-[#f6f8fb] px-1 text-2xl rounded-lg"
                             onClick={() => OpenView(e)} // Pass entire maintenance object
                           >
                             <GrFormView />
-                          </button>
+                          </button> */}
                         </td>
                       </tr>
                     ))}
